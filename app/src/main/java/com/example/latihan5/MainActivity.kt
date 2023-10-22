@@ -7,6 +7,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -164,7 +165,7 @@ fun SelectJK(
         modifier = Modifier.padding(16.dp)
     ) {
         options.forEach { item ->
-            Column(
+            Row(
                 modifier = Modifier.selectable(
                     selected = selectedValue == item,
                     onClick = {
@@ -172,8 +173,8 @@ fun SelectJK(
                         onSelectionChanged(item)
                     }
                 ),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
+                verticalAlignment = Alignment.CenterVertically
+            ){
                 RadioButton(
                     selected = selectedValue == item,
                     onClick = {
