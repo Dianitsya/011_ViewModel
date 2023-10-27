@@ -99,7 +99,6 @@ fun TampilanLayout(
                     text = "Register",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold
-
                 )
             }
             Spacer(modifier = Modifier.padding(5.dp))
@@ -189,12 +188,11 @@ fun TampilForm(cobaViewModel: CobaViewModel= viewModel()) {
     }
     Spacer(modifier = Modifier.height(30.dp))
     TextHasil(
-        namanya = cobaViewModel.namaUsr,
-        telponnya = cobaViewModel.noTlp,
-        emailnya = cobaViewModel.email,
         jenisnya = cobaViewModel.jenisKl ,
         statusnya = cobaViewModel.status,
-        alamatnya = cobaViewModel.alamat
+        alamatnya = cobaViewModel.alamat,
+        emailnya = cobaViewModel.email,
+
         )
 }
 
@@ -279,15 +277,11 @@ fun SelectStatus(
 
 
 @Composable
-fun TextHasil(namanya: String, telponnya: String, jenisnya: String, alamatnya: String, statusnya: String, emailnya: String) {
+fun TextHasil( jenisnya: String, alamatnya: String, statusnya: String, emailnya: String) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
-        Text(
-            text = "Nama : " + namanya,
-            modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
-        )
         Text(
             text = "Email : " + emailnya,
             modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
