@@ -81,7 +81,6 @@ fun TampilanLayout(
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp)
     ){
         Column (
-            verticalArrangement = Arrangement.spacedBy(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
         ){
