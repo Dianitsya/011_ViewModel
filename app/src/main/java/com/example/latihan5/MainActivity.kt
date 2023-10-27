@@ -91,7 +91,10 @@ fun TampilanLayout(
                 horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-
+                Image(
+                    painter = painterResource(id = R.drawable.icon_back),
+                    contentDescription = "", modifier = Modifier.size(40.dp)
+                )
                 Text(
                     text = "Register",
                     fontSize = 20.sp,
