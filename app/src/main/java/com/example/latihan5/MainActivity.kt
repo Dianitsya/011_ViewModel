@@ -87,7 +87,7 @@ fun TampilanLayout(
             Row (
                 modifier = Modifier
                     .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceAround,
+                horizontalArrangement = Arrangement.spacedBy(120.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
